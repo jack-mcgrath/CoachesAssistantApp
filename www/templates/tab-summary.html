@@ -1,0 +1,18 @@
+<ion-view view-title="Summary">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon icon ion-arrow-left-c" ng-click="mainCtrl.goBack()"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-ios-loop" ng-click="mainCtrl.refresh()"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding" ng-controller="summaryController as sumCtrl">
+        <div class="list card" ng-repeat="(key, obj) in sumCtrl.json">
+            <div class="item item-divider">{{key}}</div>
+            <div class="item item-body">
+                <div ng-repeat="(label, value) in obj">
+                    {{label}} : {{value}}
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

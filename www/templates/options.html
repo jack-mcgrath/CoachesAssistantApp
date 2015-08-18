@@ -1,0 +1,47 @@
+<ion-view title="Options">
+    <ion-content padding="true" ng-controller="optionsController as opCtrl">
+        <div class='list list-inset'>
+            <ul class='list'>
+                <li class="item item-toggle">
+                    <label class="toggle">
+                        <input type="checkbox" name="" value="" ng-model='opCtrl.foil'>
+                        <div class='track'>
+                            <div class='handle'></div>
+                        </div>
+                    </label>
+                    Foil
+                </li>
+                <li class="item item-toggle">
+                    <label class="toggle">
+                        <input type="checkbox" name="" value="" ng-model='opCtrl.saber'>
+                        <div class='track'>
+                            <div class='handle'></div>
+                        </div>
+                    </label>
+                    Saber
+                </li>
+                <li class="item item-toggle">
+                    <label class="toggle">
+                        <input type="checkbox" name="" value="" ng-model='opCtrl.epee'>
+                        <div class='track'>
+                            <div class='handle'></div>
+                        </div>
+                    </label>
+                    Epee
+                </li>
+            </ul>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Competition
+                </div>
+                <select ng-model='opCtrl.url' name="">
+                    <option value="http://results.usfencingresults.org/2014-2015/2015.04-APR-NAC" selected>April NAC 2015</option>
+                    <option value="http://results.usfencingresults.org/2014-2015/2015.06-JUN-SN">Summer Nationals 2015</option>
+                </select>
+            </label>
+            <button class="button button-block button-calm" ng-click="opCtrl.getVals()">
+                Submit
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

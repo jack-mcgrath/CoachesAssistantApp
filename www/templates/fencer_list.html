@@ -1,0 +1,10 @@
+<ion-view title="Fencer List">
+    <ion-content padding="true" ng-controller="listController as listCtrl">
+        <ion-list>
+            <ion-item ng-repeat="fencer in listCtrl.jayson" ng-click="listCtrl.goToActive({{fencer}})">
+                <h3>{{fencer.firstName}} , {{fencer.lastName}}</h3>
+                <h5>{{fencer.event}}</h5>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
